@@ -1,5 +1,13 @@
 function minDate(dates) {
-  //write you code here
+  var minDt = dates[0],
+    minDtObj = new Date(dates[0]);
+  dates.forEach(function (dt, index) {
+    if (new Date(dt) < minDtObj) {
+      minDt = dt;
+      minDtObj = new Date(dt);
+    }
+  });
+  return minDt;
 }
 
 // Do not change the code
